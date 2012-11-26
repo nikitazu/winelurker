@@ -2,7 +2,7 @@ require 'test_helper'
 
 class DrinksControllerTest < ActionController::TestCase
   setup do
-    @drink = drinks(:one)
+    @drink = drinks(:volnay)
     @update = {
       :title      =>'foo',
       :alcohol    => 5,

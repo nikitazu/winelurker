@@ -1,15 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  title: MyString
-  description: MyText
-  alcohol: 9.99
-  price: 9.99
-  image_url: MyString
+volnay:
+  title: Volnay
+  description: Some foo bar buz
+  alcohol: 12
+  price: 999.99
+  image_url: drinks/volnay.jpg
 
-two:
-  title: MyString
-  description: MyText
-  alcohol: 9.99
-  price: 9.99
-  image_url: MyString
+demi_du:
+  title: Pech Roc Blanc Demi Doux
+  description: Too much text to type in
+  alcohol: 7
+  price: 409.99
+  image_url: drinks/demi_du.jpg
