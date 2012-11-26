@@ -8,9 +8,12 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+
+# Drinks
+# ======
 Drink.delete_all
 
-Drink.create( :title => 'Volnay', 
+Drink.create(:title => 'Volnay', 
   :description => %{
     Элегантное, комплексное вино, выдержанное в дубе, яркого рубинового цвета. 
     В аромате проступают тона  лесных ягод, подлеска, кожи и тонким оттенком фиалки. 
@@ -22,7 +25,7 @@ Drink.create( :title => 'Volnay',
   :price => 450.00)
 
 
-Drink.create( :title => 'Pech Roc Blanc Demi Doux', 
+Drink.create(:title => 'Pech Roc Blanc Demi Doux', 
   :description => %{
     Пеш Рок Блан Деми Ду – легкое белое полусладкое вино. 
     Виноград для него выращивают на глинисто-каменистых почвах. 
@@ -37,7 +40,8 @@ Drink.create( :title => 'Pech Roc Blanc Demi Doux',
   :alcohol => 12,
   :price => 450.00)
 
-Drink.create( :title => 'Принс де Виана', 
+
+Drink.create(:title => 'Принс де Виана', 
   :description => %{
     Вино изготовлено из винограда сорта Каберне-Совиньон, выращенного в регионе Наварра. 
     Обладает интенсивным ароматом фруктов и ягод – земляники, малины, вишни - и богатым вкусом. 
@@ -46,3 +50,30 @@ Drink.create( :title => 'Принс де Виана',
   :image_url => 'drinks/demi_du_red.jpg',
   :alcohol => 12,
   :price => 450.00)
+
+
+# Places
+# ======
+Place.delete_all
+
+Place.create(
+  :title => 'Пятерочка',
+  :region => 'Невский',
+  :street => 'Обуховской обороны пр.',
+  :building => '33',
+  :image_url => 'places/five.jpg')
+
+Place.create(
+  :title => 'Ароматный мир',
+  :region => 'Адмиралтейский',
+  :street => 'Садовая ул.',
+  :building => '22',
+  :image_url => 'places/am.jpg')
+
+Place.create(
+  :title => 'Полушка',
+  :region => 'Невский',
+  :street => 'Обуховской обороны пр.',
+  :building => '32',
+  :image_url => 'polushka.jpg')
+

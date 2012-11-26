@@ -1,4 +1,6 @@
 Winelurker::Application.routes.draw do
+  resources :places
+
   resources :drinks
 
   # The priority is based upon order of creation:
