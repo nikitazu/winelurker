@@ -1,0 +1,31 @@
+// Place all the styles related to the Drinks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+div.drink_list {
+	display: table;
+}
+	
+div.drink_list div {
+	display: table-row;
+}
+	
+div.drink_item {
+	border: 2px solid black;
+	margin: 5px;
+	padding: 5px;
+}
+	
+div.drink_item p {
+	height: 100px;
+}
+	
+div.drink_item div {
+	height: 50px;
+}
+	
+img.drink_image {
+	float: left;
+	width: 150px;
+	height: 150px;
+}

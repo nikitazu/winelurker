@@ -1,0 +1,25 @@
+<h1>Напитки</h1>
+
+<div class="drinks_list">
+<% @drinks.each do |drink| %>
+	<div>
+		<div class="drink_item">
+			<%= image_tag(drink.image_url, :class => 'drink_image') %>
+			<p>
+				<b><%= drink.title %></b><br/>
+				<%= drink.description %>
+			</p>
+			<div>
+				<%= drink.alcohol %> алк. | 
+				<%= drink.price %> руб. |
+			    <%= link_to 'Исправить', edit_drink_path(drink) %> |
+			    <%= link_to 'Удалить', drink, confirm: 'Are you sure?', method: :delete %>
+			</div>
+		</div>
+	</div>
+<% end %>
+</div>
+
+<br />
+
+<%= link_to 'Добавить напиток', new_drink_path %>
