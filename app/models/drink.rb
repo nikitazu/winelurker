@@ -1,6 +1,11 @@
 class Drink < ActiveRecord::Base
   attr_accessible :alcohol, :description, :image_url, :price, :title
   
+  default_scope :order => 'title'
+  
+  # Validation
+  # ==========
+  
   validates :title, :price, :presence => true
   
   validates :price, :numericality => { :greater_than_or_equal_to => 0.01 }
