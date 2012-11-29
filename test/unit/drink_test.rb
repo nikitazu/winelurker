@@ -14,8 +14,7 @@ class DrinkTest < ActiveSupport::TestCase
   test 'drink name must be unique' do
     drink = Drink.create(:title => 'Volnay',
       :image_url => 'drinks/volmay.jpg',
-      :alcohol => 12,
-      :price => 450.00)
+      :alcohol => 12)
     
       assert drink.invalid?
       assert drink.errors[:title].any?

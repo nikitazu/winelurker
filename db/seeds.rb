@@ -48,8 +48,7 @@ Drink.create(:title => 'Volnay',
     танинами и продолжительным послевкусием.
   },
   :image_url => 'drinks/volmay.jpg',
-  :alcohol => 12,
-  :price => 450.00)
+  :alcohol => 12)
 
 
 Drink.create(:title => 'Pech Roc Blanc Demi Doux', 
@@ -64,8 +63,7 @@ Drink.create(:title => 'Pech Roc Blanc Demi Doux',
     Отлично подойдет к блюдам из птицы и рыбы.
   },
   :image_url => 'drinks/demi_du.jpg',
-  :alcohol => 12,
-  :price => 450.00)
+  :alcohol => 12)
 
 
 Drink.create(:title => 'Принс де Виана', 
@@ -75,8 +73,7 @@ Drink.create(:title => 'Принс де Виана',
     Вино универсально в гастрономии – подходит практически к любому блюду.
   },
   :image_url => 'drinks/demi_du_red.jpg',
-  :alcohol => 12,
-  :price => 450.00)
+  :alcohol => 12)
 
 # Drink items
 # ===========

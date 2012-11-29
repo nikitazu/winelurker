@@ -11,7 +11,7 @@
 			</p>
 			<div>
 				<%= drink.alcohol %> алк. | 
-				<%= two_digits(drink.price) %> руб. |
+				<!--%= two_digits(drink.price) %> руб. | -->
 			    <%= link_to 'Исправить', edit_drink_path(drink) %> |
 			    <%= link_to 'Удалить', drink, confirm: 'Are you sure?', method: :delete %> |
 				<%= link_to 'Указать место', new_drink_item_path(:drink_id => drink.id) %>

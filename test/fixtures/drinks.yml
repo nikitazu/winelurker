@@ -4,12 +4,10 @@ volnay:
   title: Volnay
   description: Some foo bar buz
   alcohol: 12
-  price: 999.99
   image_url: drinks/volnay.jpg
 
 demi_du:
   title: Pech Roc Blanc Demi Doux
   description: Too much text to type in
   alcohol: 7
-  price: 409.99
   image_url: drinks/demi_du.jpg

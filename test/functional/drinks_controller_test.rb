@@ -6,7 +6,6 @@ class DrinksControllerTest < ActionController::TestCase
     @update = {
       :title      =>'foo',
       :alcohol    => 5,
-      :price      => 599.99,
       :image_url  => 'drinks/foo.jpg'
     }
   end
