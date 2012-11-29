@@ -26,6 +26,8 @@ class DrinkItemsController < ApplicationController
   # GET /drink_items/new.json
   def new
     @drink_item = DrinkItem.new
+    @drink_item.drink_id = params[:drink_id]
+    @places = Place.all.map { |place| [place.title, place.id] }
 
     respond_to do |format|
       format.html # new.html.erb
@@ -41,9 +43,7 @@ class DrinkItemsController < ApplicationController
   # POST /drink_items
   # POST /drink_items.json
   def create
-    drink = Drink.find(params[:drink_id])
-    @place = Place.find(params[:place_id])
-    @drink_item = @place.drink_items.build(:drink => drink)
+    @drink_item = DrinkItem.new(params[:drink_item])
 
     respond_to do |format|
       if @drink_item.save

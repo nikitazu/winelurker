@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :place_id %><br />
-    <%= f.number_field :place_id %>
+	<%= f.select :place_id, options_for_select(@places) %>
   </div>
   <div class="field">
     <%= f.label :drink_id %><br />
