@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Country:</b>
+  <%= @place.country %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @place.city %>
+</p>
+
+<p>
+  <b>Region:</b>
+  <%= @place.region %>
+</p>
+
+<p>
+  <b>Street:</b>
+  <%= @place.street %>
+</p>
+
+<p>
+  <b>Building:</b>
+  <%= @place.building %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @place.title %>
+</p>
+
+<p>
+  <b>Image url:</b>
+  <%= @place.image_url %>
+</p>
+
+<p>
+  <b>Nearest metro:</b>
+  <%= @place.nearest_metro %>
+</p>
+
+
+<%= link_to 'Edit', edit_place_path(@place) %> |
+<%= link_to 'Back', places_path %>
