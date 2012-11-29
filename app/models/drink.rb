@@ -3,6 +3,12 @@ class Drink < ActiveRecord::Base
   
   default_scope :order => 'title'
   
+  # References
+  # ==========
+  
+  has_many :drink_items
+  before_destroy :ensure_not_referenced_by_any_drink_item
+  
   # Validation
   # ==========
   
@@ -21,4 +27,15 @@ class Drink < ActiveRecord::Base
     :with     => %r{\.(gif|jpg|jpeg|png)$}i,
     :message  => 'must be a URL for GIF, JPG or PNG image.'
   }
+  
+  private
+  
+  def ensure_not_referenced_by_any_drink_item
+    if drink_items.count.zero?
+      return true
+    else
+      errors.add(:base, 'Drink Items present')
+      return false
+    end
+  end
 end

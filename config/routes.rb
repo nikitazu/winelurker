@@ -1,4 +1,6 @@
 Winelurker::Application.routes.draw do
+  resources :drink_items
+
   resources :places
 
   resources :drinks
