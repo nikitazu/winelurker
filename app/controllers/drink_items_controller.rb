@@ -45,6 +45,7 @@ class DrinkItemsController < ApplicationController
   # POST /drink_items.json
   def create
     @drink_item = DrinkItem.new(params[:drink_item])
+    @places = Place.all.map { |place| [place.title, place.id] }
 
     respond_to do |format|
       if @drink_item.save
@@ -61,7 +62,8 @@ class DrinkItemsController < ApplicationController
   # PUT /drink_items/1.json
   def update
     @drink_item = DrinkItem.find(params[:id])
-
+    @places = Place.all.map { |place| [place.title, place.id] }
+    
     respond_to do |format|
       if @drink_item.update_attributes(params[:drink_item])
         format.html { redirect_to @drink_item, notice: 'Drink item was successfully updated.' }

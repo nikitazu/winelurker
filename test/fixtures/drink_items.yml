@@ -3,7 +3,10 @@
 one:
   place_id: 1
   drink_id: 1
+  price:    10
 
 two:
   place_id: 1
   drink_id: 1
+  price:    20
+  

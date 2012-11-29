@@ -9,6 +9,33 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
+
+# Places
+# ======
+Place.delete_all
+
+Place.create(
+  :title => 'Пятерочка',
+  :region => 'Невский',
+  :street => 'Обуховской обороны пр.',
+  :building => '33',
+  :image_url => 'places/five.jpg')
+
+Place.create(
+  :title => 'Ароматный мир',
+  :region => 'Адмиралтейский',
+  :street => 'Садовая ул.',
+  :building => '22',
+  :image_url => 'places/am.jpg')
+
+Place.create(
+  :title => 'Полушка',
+  :region => 'Невский',
+  :street => 'Обуховской обороны пр.',
+  :building => '32',
+  :image_url => 'polushka.jpg')
+
+
 # Drinks
 # ======
 Drink.delete_all
@@ -51,29 +78,6 @@ Drink.create(:title => 'Принс де Виана',
   :alcohol => 12,
   :price => 450.00)
 
-
-# Places
-# ======
-Place.delete_all
-
-Place.create(
-  :title => 'Пятерочка',
-  :region => 'Невский',
-  :street => 'Обуховской обороны пр.',
-  :building => '33',
-  :image_url => 'places/five.jpg')
-
-Place.create(
-  :title => 'Ароматный мир',
-  :region => 'Адмиралтейский',
-  :street => 'Садовая ул.',
-  :building => '22',
-  :image_url => 'places/am.jpg')
-
-Place.create(
-  :title => 'Полушка',
-  :region => 'Невский',
-  :street => 'Обуховской обороны пр.',
-  :building => '32',
-  :image_url => 'polushka.jpg')
-
+# Drink items
+# ===========
+DrinkItem.delete_all

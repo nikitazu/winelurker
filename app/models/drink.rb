@@ -1,5 +1,5 @@
 class Drink < ActiveRecord::Base
-  attr_accessible :alcohol, :description, :image_url, :price, :title
+  attr_accessible :alcohol, :description, :image_url, :title
   
   default_scope :order => 'title'
   
@@ -12,11 +12,9 @@ class Drink < ActiveRecord::Base
   # Validation
   # ==========
   
-  validates :title, :price, :presence => true
+  validates :title, :presence => true
   
   validates :title, :uniqueness => true
-  
-  validates :price, :numericality => { :greater_than_or_equal_to => 0.01 }
   
   validates :alcohol, :numericality => { 
     :greater_than_or_equal_to => 0, 

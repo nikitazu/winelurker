@@ -7,28 +7,8 @@ class DrinkTest < ActiveSupport::TestCase
     drink = Drink.new
     assert drink.invalid?
     assert drink.errors[:title].any?
-    assert drink.errors[:price].any?
     assert drink.errors[:alcohol].any?
     assert drink.errors[:image_url].any?
-  end
-  
-  test 'drink price must be positive' do
-    volnay = drinks(:volnay)
-    old_price = volnay.price
-    
-    assert volnay.valid?
-    
-    volnay.price = -1
-    assert volnay.invalid?
-    
-    volnay.price = 0
-    assert volnay.invalid?
-    
-    volnay.price = 100.99
-    assert volnay.valid?
-    
-    volnay.price = old_price
-    assert volnay.valid?
   end
   
   test 'drink name must be unique' do
