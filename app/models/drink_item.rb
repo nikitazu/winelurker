@@ -1,5 +1,5 @@
 class DrinkItem < ActiveRecord::Base
-  attr_accessible :drink_id, :place_id
+  attr_accessible :drink_id, :place_id, :drink
   
   # References
   # ==========

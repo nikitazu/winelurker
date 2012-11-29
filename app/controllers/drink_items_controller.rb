@@ -41,7 +41,9 @@ class DrinkItemsController < ApplicationController
   # POST /drink_items
   # POST /drink_items.json
   def create
-    @drink_item = DrinkItem.new(params[:drink_item])
+    drink = Drink.find(params[:drink_id])
+    @place = Place.find(params[:place_id])
+    @drink_item = @place.drink_items.build(:drink => drink)
 
     respond_to do |format|
       if @drink_item.save

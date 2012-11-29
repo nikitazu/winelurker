@@ -13,7 +13,9 @@
 				<%= drink.alcohol %> алк. | 
 				<%= two_digits(drink.price) %> руб. |
 			    <%= link_to 'Исправить', edit_drink_path(drink) %> |
-			    <%= link_to 'Удалить', drink, confirm: 'Are you sure?', method: :delete %>
+			    <%= link_to 'Удалить', drink, confirm: 'Are you sure?', method: :delete %> |
+				<%= button_to 'Указать место', 
+							drink_items_path(:drink_id => drink.id, :place_id => 7) %>
 			</div>
 		</div>
 	</div>

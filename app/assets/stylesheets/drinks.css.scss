@@ -23,6 +23,14 @@ div.drink_item p {
 div.drink_item div {
 	height: 50px;
 }
+
+div.drink_item form {
+	display: inline;
+}
+
+div.drink_item form div {
+	display: inline;
+}
 	
 img.drink_image {
 	float: left;

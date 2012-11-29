@@ -19,3 +19,24 @@ two:
   title: MyString
   image_url: MyString
   nearest_metro: MyString
+
+five:
+  title: Пятерочка
+  region: Невский
+  street: Обуховской обороны пр.
+  building: 33
+  image_url: places/five.jpg
+
+am:
+  title: Ароматный мир
+  region: Адмиралтейский
+  street: Садовая ул.
+  building: 22
+  image_url: places/am.jpg
+
+half:
+  title: Полушка
+  region: Невский
+  street: Обуховской обороны пр.
+  building: 32
+  image_url: polushka.jpg
