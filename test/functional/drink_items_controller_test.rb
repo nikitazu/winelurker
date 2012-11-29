@@ -18,7 +18,7 @@ class DrinkItemsControllerTest < ActionController::TestCase
 
   test "should create drink_item" do
     assert_difference('DrinkItem.count') do
-      post :create, :drink_id => drinks(:volnay).id, :place_id => places(:five).id
+      post :create, drink_item: { drink_id: @drink_item.drink_id, place_id: @drink_item.place_id }
     end
 
     assert_redirected_to drink_item_path(assigns(:drink_item))

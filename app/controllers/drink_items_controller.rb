@@ -38,6 +38,7 @@ class DrinkItemsController < ApplicationController
   # GET /drink_items/1/edit
   def edit
     @drink_item = DrinkItem.find(params[:id])
+    @places = Place.all.map { |place| [place.title, place.id] }
   end
 
   # POST /drink_items
