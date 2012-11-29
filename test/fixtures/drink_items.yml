@@ -6,7 +6,7 @@ one:
   price:    10
 
 two:
-  place_id: 1
-  drink_id: 1
+  place_id: 2
+  drink_id: 2
   price:    20
   

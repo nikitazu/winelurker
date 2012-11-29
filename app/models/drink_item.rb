@@ -1,6 +1,8 @@
 class DrinkItem < ActiveRecord::Base
   attr_accessible :drink_id, :place_id, :price
   
+  default_scope :order => 'updated_at DESC'
+  
   # References
   # ==========
   

@@ -4,7 +4,7 @@ class DrinksController < ApplicationController
   # GET /drinks.json
   def index
     @drinks = Drink.all
-
+    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @drinks }
