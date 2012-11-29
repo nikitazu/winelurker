@@ -12,7 +12,7 @@ class DrinkTest < ActiveSupport::TestCase
     assert drink.errors[:image_url].any?
   end
   
-  test 'drink price' do
+  test 'drink price must be positive' do
     volnay = drinks(:volnay)
     old_price = volnay.price
     
@@ -29,5 +29,15 @@ class DrinkTest < ActiveSupport::TestCase
     
     volnay.price = old_price
     assert volnay.valid?
+  end
+  
+  test 'drink name must be unique' do
+    drink = Drink.create(:title => 'Volnay',
+      :image_url => 'drinks/volmay.jpg',
+      :alcohol => 12,
+      :price => 450.00)
+    
+      assert drink.invalid?
+      assert drink.errors[:title].any?
   end
 end
