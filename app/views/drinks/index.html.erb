@@ -13,7 +13,6 @@
 			
 			<div class="drink_actions">
 				<%= drink.alcohol %> алк. | 
-				<!--%= two_digits(drink.price) %> руб. | -->
 			    <%= link_to 'Исправить', edit_drink_path(drink) %> |
 			    <%= link_to 'Удалить', drink, confirm: 'Are you sure?', method: :delete %> |
 				<%= link_to 'Указать место', new_drink_item_path(:drink_id => drink.id) %>
@@ -23,7 +22,7 @@
 				<% if drink.drink_items.any? %>
 					<span>Цены (руб.):</span>
 					<% drink.drink_items.each do |item| %>
-						<span> <%= item.place.title %>: <%= item.price %>| </span>
+						<span> <%= item.place.title %>: <%= two_digits(item.price) %> | </span>
 					<% end %>
 				<% end %>
 			</div>
